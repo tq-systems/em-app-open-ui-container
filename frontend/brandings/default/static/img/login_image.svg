@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="173" height="150" xmlns="http://www.w3.org/2000/svg" viewBox="-21430 -2455.089 78.289 68.025">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cbcbcb;
+      }
+
+      .cls-2, .cls-3, .cls-5 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #707070;
+      }
+
+      .cls-3 {
+        stroke: #000;
+        stroke-width: 3px;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Dr.EMOS_small" transform="translate(-22608 -2629)">
+    <ellipse id="Ellipse_295" data-name="Ellipse 295" class="cls-1" cx="3.447" cy="3.447" rx="3.447" ry="3.447" transform="translate(1192.947 177.488)"/>
+    <ellipse id="Ellipse_296" data-name="Ellipse 296" class="cls-1" cx="3.447" cy="3.447" rx="3.447" ry="3.447" transform="translate(1206.328 177.488)"/>
+    <ellipse id="Ellipse_297" data-name="Ellipse 297" class="cls-1" cx="3.447" cy="3.447" rx="3.447" ry="3.447" transform="translate(1219.709 177.488)"/>
+    <ellipse id="Ellipse_298" data-name="Ellipse 298" class="cls-1" cx="3.041" cy="3.041" rx="3.041" ry="3.041" transform="translate(1192.947 232.231)"/>
+    <ellipse id="Ellipse_299" data-name="Ellipse 299" class="cls-1" cx="3.041" cy="3.041" rx="3.041" ry="3.041" transform="translate(1206.328 232.231)"/>
+    <ellipse id="Ellipse_300" data-name="Ellipse 300" class="cls-1" cx="3.041" cy="3.041" rx="3.041" ry="3.041" transform="translate(1220.115 232.231)"/>
+    <ellipse id="Ellipse_301" data-name="Ellipse 301" class="cls-1" cx="3.041" cy="3.041" rx="3.041" ry="3.041" transform="translate(1233.902 232.231)"/>
+    <path id="Path_251" data-name="Path 251" class="cls-1" d="M-23613.3-3122.791v-15.078h28.555Z" transform="translate(24821.938 3340.551)"/>
+    <line id="Line_163" data-name="Line 163" class="cls-2" x2="54.337" transform="translate(1189.5 191.073)"/>
+    <line id="Line_164" data-name="Line 164" class="cls-2" x2="54.337" transform="translate(1189.5 225.54)"/>
+    <path id="Path_250" data-name="Path 250" class="cls-2" d="M700.572,344.375V329.259H729.16v15.116" transform="translate(508.016 -126.525)"/>
+    <g id="Group_374" data-name="Group 374">
+      <path id="Path_248" data-name="Path 248" class="cls-2" d="M54.13,1.2H37.936V0h-8.1V1.2H24.291V0h-8.1V1.2H10.646V0h-8.1V1.2H0V65.825H2.549v1.2h8.1v-1.2h5.548v1.2h8.1v-1.2h5.548v1.2h8.1v-1.2h5.548v1.2h8.1v-1.2H54.13V1.2ZM33.737,3.149A3.075,3.075,0,0,1,36.886,6.3a3.167,3.167,0,0,1-3.149,3.149A3.075,3.075,0,0,1,30.589,6.3,3.075,3.075,0,0,1,33.737,3.149Zm-13.495,0A3.075,3.075,0,0,1,23.391,6.3a3.167,3.167,0,0,1-3.149,3.149A3.075,3.075,0,0,1,17.094,6.3,3.075,3.075,0,0,1,20.242,3.149Zm-13.495,0A3.075,3.075,0,0,1,9.9,6.3,3.167,3.167,0,0,1,6.747,9.446,3.075,3.075,0,0,1,3.6,6.3,2.99,2.99,0,0,1,6.747,3.149ZM3.9,60.727a2.7,2.7,0,1,1,2.7,2.7A2.688,2.688,0,0,1,3.9,60.727Zm13.495,0a2.7,2.7,0,1,1,2.7,2.7A2.688,2.688,0,0,1,17.393,60.727Zm13.645,0a2.7,2.7,0,1,1,2.7,2.7A2.688,2.688,0,0,1,31.038,60.727Zm13.495,0a2.7,2.7,0,1,1,2.7,2.7A2.688,2.688,0,0,1,44.533,60.727Z" transform="translate(1189.545 174.411)"/>
+    </g>
+  </g>
+</svg>

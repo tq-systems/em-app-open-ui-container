@@ -1,0 +1,9 @@
+{
+    "layout": "iconbar",
+    "footerLinks": {
+        "hasPrivacy": true,
+        "hasImprint": true,
+        "hasDisclaimer": true,
+        "hasLicenses": true
+    }
+}

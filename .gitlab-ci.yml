@@ -1,0 +1,33 @@
+---
+include:
+- project: tq-em/public/build/toolchain
+  file: ci/apps.yml
+  ref: main
+  rules:
+    - if: $PUBLIC_TOOLCHAIN_CI_REF == null
+
+- project: tq-em/public/build/toolchain
+  file: ci/apps.yml
+  ref: $PUBLIC_TOOLCHAIN_CI_REF
+  rules:
+    - if: $PUBLIC_TOOLCHAIN_CI_REF
+
+Prepare:
+  extends: .prepare-app-build
+
+# The package architecture is all, the amd or aarch64 image can be used.
+Build Package (aarch64):
+  extends: .build-aarch64-app
+
+Yarn Audit:
+  stage: test
+  extends:
+    - .gitlab-runner-tag
+  script:
+    - make yarn-audit
+
+Gitleaks:
+  extends: .gitleaks
+
+Deploy Snapshot:
+  extends: .deploy-snapshot

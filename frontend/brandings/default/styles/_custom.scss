@@ -1,0 +1,352 @@
+/*
+ * Copyright (c) 2026 TQ-Systems GmbH <license@tq-group.com>, D-82229 Seefeld,
+ * Germany. All rights reserved.
+ * Author: Ronny Freyer and the Energy Manager development team
+ *
+ * This software is licensed under the TQ-Systems Product Software License
+ * Agreement Version 1.0.3 or any later version.
+ * You can obtain a copy of the License Agreement in the TQS (TQ-Systems
+ * Software Licenses) folder on the following website:
+ * https://www.tq-group.com/en/support/downloads/tq-software-license-conditions/
+ * In case of any license issues please contact license@tq-group.com.
+ */
+
+@use "sass:map";
+@use "tokens" as tokens;
+@use "./fonts" as fonts;
+
+:root {
+    // Loop through the colors map and output each color as css variables
+    @each $name, $value in tokens.$colors {
+        --#{$name}: #{$value};
+    }
+
+    // Loop through the spacings map and output each spacing value as css variables
+    @each $name, $value in tokens.$spacings {
+        --spacing-#{$name}: #{$value};
+    }
+
+    // Loop through the font sizes map and output each font size as css variables
+    @each $name, $value in tokens.$font-sizes {
+        --font-size-#{$name}: #{$value};
+    }
+
+    --wrapper-content-alignment: start;
+    --widget-max-width: 550px;
+    --navbar-height: 55px;
+    --navbar-brand-width: 210px;
+}
+
+.body {
+    font-size: var(--font-size-xl);
+}
+
+h4, h3 {
+    font-size: #{map.get(tokens.$font-sizes,"xl")};
+}
+
+@media (max-width: map.get(tokens.$breakpoints, lg)) {
+    h4, h3, h5 {
+        font-size: #{map.get(tokens.$font-sizes,"lg")};
+    }
+    h6 {
+        font-size: #{map.get(tokens.$font-sizes,"sm")};
+    }
+}
+
+svg > use {
+ stroke-width: 2px;
+ // to thicken up hero icons which consist of paths and are rendered too thin normally
+ // does not affect icons with a fill an no stroke
+}
+
+// ***
+// App / Layout
+// ***
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-body {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    margin-top: var(--navbar-height);
+}
+
+.main {
+    flex: 1;
+    min-width: 0;
+}
+
+@media (max-width: map.get(tokens.$breakpoints, lg)) {
+    .main {
+        margin-left: 0;
+    }
+}
+
+.app-content-wrapper {
+    justify-content: var(--wrapper-content-alignment) !important
+}
+
+@media (max-width: map.get(tokens.$breakpoints, lg)) {
+ main.main {
+    margin-top: 0.75rem !important; // reduce top margin on mobile screens
+    padding-left: 3rem; // make room for burger button
+ }
+}
+
+// **********
+// Animations
+// **********
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animated {
+    animation-duration: 0.7s;
+    animation-fill-mode: both;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+// ******
+// Navbar
+// ******
+.nav-item {
+    color: var(--color-defaulttext);
+    text-decoration: none;
+}
+
+.nav-item:active,
+.nav-item:focus,
+.nav-item:hover {
+    color: var(--color-gray-700)
+}
+
+nav .dropdown-menu.show{
+    background-color: var(--color-white);
+}
+
+nav .dropdown-item:hover{
+    background-color: var(--color-gray-200);
+}
+
+nav .dropdown-item.active,
+nav .dropdown-item:active,
+nav .dropdown-item:focus {
+    background-color: var(--color-primary);
+}
+
+.navbar {
+    background-color: var(--color-white) !important;
+    border-bottom: 1px solid var(--color-gray-200);
+    height: var(--navbar-height);
+}
+
+.navbar-brand {
+    width: var(--navbar-brand-width);
+}
+
+// *******
+// Sidebar Navigation
+// *******
+.sidebar-nav a {
+    color: var(--color-defaulttext);
+}
+
+.sidebar-nav a.active-icon {
+    color: var(--color-primary) !important;
+    background-color: var(--color-white) !important;
+    font-weight: 600;
+}
+
+.sidebar-nav a:hover {
+    color: var(--color-primary) !important;
+    background-color: var(--color-white) !important;
+}
+
+// ******
+// Footer
+// ******
+footer {
+    margin-top: auto;
+}
+
+.footer-links {
+    --bs-nav-link-padding-y: 0;
+}
+
+.app-footer-item .nav:first-child a.nav-link {
+    padding-left: 0;
+}
+
+// *******
+// Buttons
+// *******
+.btn {
+    text-transform: uppercase;
+}
+.btn.btn-primary,.btn.btn-danger,
+.btn.btn-primary:hover,.btn.btn-danger:hover {
+    color: var(--color-white);
+}
+.btn.btn-outline-secondary,
+.btn.btn-outline-secondary:hover {
+    color: var(--color-defaulttext);
+}
+.btn-link,
+.btn-link:hover {
+    color: var(--color-primary);
+}
+
+//*****
+// Button-group
+//*****
+.btn-group > button:last-of-type {
+    border-top-right-radius: var(--bs-border-radius-sm) !important;
+    border-bottom-right-radius: var(--bs-border-radius-sm) !important;
+}
+
+// *****
+// Cards
+// *****
+.card-header {
+    border-bottom: none;
+    background-color: transparent;
+}
+
+.card-header a {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h3 {
+    font-weight: bold;
+    margin-top: #{map.get(tokens.$spacings,"xs")};
+    color: var(--color-defaulttext);
+}
+
+.card-header h3 button {
+    margin-left: #{map.get(tokens.$spacings,"xs")};
+}
+
+.card-header h6 {
+    margin-top: -#{map.get(tokens.$spacings,"sm")};
+}
+
+.card-toggle-icon {
+    height: 16px;
+}
+
+// *********
+// Dashboard
+// *********
+.dashboard-widget {
+    flex: 1 1 0 !important;
+    max-width: var(--widget-max-width);
+}
+
+.dashboard-widget > [data-v-app] {
+    height: 100%;
+}
+
+// ***************
+// Dashboard Icons
+// ***************
+.dashboard-icon {
+    width: 7em;
+    cursor: pointer;
+    overflow-wrap: break-word
+}
+
+.dashboard-icon svg {
+    background-color: var(--color-primary) !important;
+    border-radius: var(--bs-border-radius-sm) !important;
+    width: 60px;
+    height: 60px;
+}
+
+.dashboard-icon:hover svg {
+    background-color: var(--color-info) !important;
+    filter: brightness(1.1);
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
+// ******
+// Tables
+// ******
+.table,
+.table th,
+.table td {
+  border-left: none !important;
+  border-right: none !important;
+  background-color: transparent !important;
+}
+
+.table thead th,
+.table thead td,
+.table thead tr {
+  border-top: 0 !important;
+}
+
+.table > thead {
+    background-color: var(--color-gray-100);
+}
+
+// *****
+// Links
+// *****
+.nav-link {
+    color: var(--color-primary);
+}
+
+// *****
+// Forms
+// *****
+.input-group button.btn.btn-secondary{
+    border-top-right-radius: var(--bs-border-radius) !important;
+    border-bottom-right-radius: var(--bs-border-radius) !important;
+}
+
+// **************
+// vue Datepicker
+// **************
+.dp__theme_light {
+    --dp-primary-color: var(--color-primary) !important;
+}
+
+:root {
+    /*General*/
+    --dp-font-family: fonts.$branding-font !important;
+    --dp-border-radius: var(--bs-border-radius) !important;
+    --dp-cell-border-radius: var(--bs-border-radius) !important;
+}
+
+@media (max-width: map.get(tokens.$breakpoints, sm)) {
+  .main {
+    margin-left: 0;
+  }
+}
+
+// Prevent iOS Safari auto-zoom on input focus
+// iOS WebViews on mobile/tablet only: below 1rem (16px) triggers auto-zoom
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: map.get(tokens.$breakpoints, md)) {
+    input, select, textarea {
+      font-size: 1rem;
+    }
+  }
+}

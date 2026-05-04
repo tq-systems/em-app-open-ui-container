@@ -1,0 +1,34 @@
+{
+  "name": "ui-container-frontend",
+  "private": true,
+  "version": "2.6.0",
+  "type": "module",
+  "description": "UI Container",
+  "scripts": {
+    "dev": "vite --mode development --config node_modules/@tq-systems/em-ui-core/config/vite.dev.js",
+    "build": "vite build --config node_modules/@tq-systems/em-ui-core/config/vite.buildProd.js"
+  },
+  "dependencies": {
+    "@tq-systems/em-http-service": "https://github.com/tq-systems/em-frontend-http-service.git#v1.0.1",
+    "@tq-systems/em-ui-core": "https://github.com/tq-systems/em-frontend-ui-core.git#v1.0.1",
+    "@tq-systems/em-vue3-core": "https://github.com/tq-systems/em-frontend-vue3-core.git#v1.0.1",
+    "bootstrap": "^5.3.3",
+    "file-saver": "^2.0.5",
+    "vue": "^3.5.13",
+    "vue-i18n": "^11.1.12",
+    "vue-router": "^4.5.0",
+    "zod": "^3.25.64"
+  },
+  "devDependencies": {
+    "@popperjs/core": "^2.11.8",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "autoprefixer": "^10.4.20",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-license": "^3.5.3",
+    "rollup-plugin-sbom": "^2.0.3",
+    "sass-embedded": "^1.86.1",
+    "vite": "^6.0.1",
+    "vite-plugin-static-copy": "^2.3.1"
+  },
+  "packageManager": "yarn@4.6.0"
+}

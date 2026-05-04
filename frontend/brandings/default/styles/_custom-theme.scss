@@ -1,0 +1,75 @@
+/*
+ * Copyright (c) 2026 TQ-Systems GmbH <license@tq-group.com>, D-82229 Seefeld,
+ * Germany. All rights reserved.
+ * Author: Ronny Freyer and the Energy Manager development team
+ *
+ * This software is licensed under the TQ-Systems Product Software License
+ * Agreement Version 1.0.3 or any later version.
+ * You can obtain a copy of the License Agreement in the TQS (TQ-Systems
+ * Software Licenses) folder on the following website:
+ * https://www.tq-group.com/en/support/downloads/tq-software-license-conditions/
+ * In case of any license issues please contact license@tq-group.com.
+ */
+
+@use "sass:map";
+@use "sass:string";
+@use "./fonts" as fonts;
+@use "./tokens" as tokens;
+
+// Create $custom-theme-colors by removing the "color-" prefix from the keys
+$custom-theme-colors: ();
+@each $key, $value in tokens.$colors {
+  $name: string.slice($key, 7); // z.B. "color-primary" → "primary"
+  $custom-theme-colors: map.merge($custom-theme-colors, ($name: $value));
+}
+
+// Create custom grid breakpoints
+$custom-grid-breakpoints: ();
+@each $key, $value in tokens.$breakpoints {
+  $custom-grid-breakpoints: map.merge($custom-grid-breakpoints, ($key: $value));
+}
+
+// Create custom container max-widths
+$custom-container-max-widths: ();
+@each $key, $value in tokens.$container-widths {
+  $custom-container-max-widths: map.merge($custom-container-max-widths, ($key: $value));
+}
+
+// Settings for the `<body>` element.
+$body-bg: map.get($custom-theme-colors, "gray-100");
+$body-color: map.get($custom-theme-colors, "defaulttext");
+
+// Typography
+$font-family-base: fonts.$branding-font;
+$font-size-base: map.get(tokens.$font-sizes, "base");
+$font-sizes: tokens.$font-sizes;
+
+// Border Radius
+$border-radius: map.get(tokens.$border-radius, "md");
+
+$border-radius-xs: map.get(tokens.$border-radius, "xs");
+$border-radius-sm: map.get(tokens.$border-radius, "sm");
+$border-radius-lg: map.get(tokens.$border-radius, "lg");
+$border-radius-xl: map.get(tokens.$border-radius, "xl");
+$border-radius-xxl: map.get(tokens.$border-radius, "xxl");
+$border-radius-xxxl: map.get(tokens.$border-radius, "xxxl");  
+
+// Navbar styles
+$navbar-brand-padding-y: 0;
+
+// Card styles
+$card-bg: map.get(tokens.$colors, "color-white");
+$card-border-color: map.get(tokens.$colors, "color-color-gray-200");
+$card-border-width: 1px;
+$card-cap-bg: map.get(tokens.$colors, "color-white");
+
+// Link styles
+$link-color: map.get(tokens.$colors, "color-primary");
+$link-decoration: none;
+
+//Dropdown colors
+$dropdown-link-active-bg: map.get(tokens.$colors, "color-primary");
+$dropdown-link-hover-bg: map.get(tokens.$colors, "color-gray-100");
+
+$custom-active-color: map.get(tokens.$colors, "color-defaulttext-inverted");
+$custom-active-bg: map.get(tokens.$colors, "color-primary");

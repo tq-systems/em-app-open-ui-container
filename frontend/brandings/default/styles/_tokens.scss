@@ -1,0 +1,146 @@
+/*
+ * Copyright (c) 2026 TQ-Systems GmbH <license@tq-group.com>, D-82229 Seefeld,
+ * Germany. All rights reserved.
+ * Author: Ronny Freyer and the Energy Manager development team
+ *
+ * This software is licensed under the TQ-Systems Product Software License
+ * Agreement Version 1.0.3 or any later version.
+ * You can obtain a copy of the License Agreement in the TQS (TQ-Systems
+ * Software Licenses) folder on the following website:
+ * https://www.tq-group.com/en/support/downloads/tq-software-license-conditions/
+ * In case of any license issues please contact license@tq-group.com.
+ */
+
+@use 'sass:color';
+
+/*
+* Define primary branding colors in variables
+* for easier reuse in multiple places
+* Using Bootstrap 5 default color palette
+*/
+$color-primary:   #0d6efd;  // Bootstrap primary blue
+$color-tertiary1: #20c997;  // Bootstrap teal
+$color-tertiary2: #198754;  // Bootstrap success green
+$color-tertiary3: #ffc107;  // Bootstrap warning yellow
+$color-tertiary4: #fd7e14;  // Bootstrap orange
+$color-tertiary5: #fd7e14;  // Bootstrap orange
+$color-tertiary6: #dc3545;  // Bootstrap danger red
+$color-tertiary7: #d63384;  // Bootstrap pink
+$color-tertiary8: #6f42c1;  // Bootstrap purple
+
+/*
+* Predefined shades for usage in charts
+* Lighter variants of primary colors for charts and visualizations
+*/
+$color-primary-50: #6ea8fe;
+$color-primary-20: #cfe2ff;
+
+$color-tertiary2-50: #75b798;
+$color-tertiary2-20: #d1e7dd;
+
+$color-tertiary6-50: #ea868f;
+$color-tertiary6-20: #f8d7da;
+
+$colors: (
+    "color-defaulttext-inverted":#f5f5f5,
+    "color-defaulttext": #212529,
+    "color-primary": $color-primary,
+    "color-secondary": #6c757d,       // Bootstrap gray
+    "color-success": $color-tertiary2,
+    "color-success-light": #75b798,
+    "color-info": $color-primary,
+    "color-warning": $color-tertiary3,
+    "color-warning-light": #ffda6a,
+    "color-danger": $color-tertiary6,
+    "color-light": #f8f9fa,           // Bootstrap light
+    "color-dark": #212529,            // Bootstrap dark
+    "color-error-light": #ea868f,
+    "color-gray": #6c757d,
+    "color-gray-light": #dee2e6,
+    "color-gray-dark": #495057,
+    "color-tertiary1": $color-tertiary1,
+    "color-tertiary2": $color-tertiary2,
+    "color-tertiary3": $color-tertiary3,
+    "color-tertiary4": $color-tertiary4,
+    "color-tertiary5": $color-tertiary5,
+    "color-tertiary6": $color-tertiary6,
+    "color-tertiary7": $color-tertiary7,
+    "color-tertiary8": $color-tertiary8,
+    "color-white": #fff,
+    "color-black": #000,
+    "color-gray-100": #f8f9fa,
+    "color-gray-200": #e9ecef,
+    "color-gray-300": #dee2e6,
+    "color-gray-400": #ced4da,
+    "color-gray-500": #adb5bd,
+    "color-gray-600": #6c757d,
+    "color-gray-700": #495057,
+    "color-gray-800": #343a40,
+    "color-gray-900": #212529,
+    "color-line-base": #000,
+    "color-line-alternate": #6c757d,
+    "color-line-highlight": $color-primary,
+    "color-line-background": #ffffff,
+    "color-dark-blue": #0d6efd,   // sidebar nav background (Bootstrap primary)
+    // charts, sankey
+    "color-chart-color1-0": $color-primary,
+    "color-chart-color1-1": $color-primary-50,
+    "color-chart-color1-2": $color-primary-20,
+    "color-chart-color2-0": $color-tertiary2,
+    "color-chart-color2-1": $color-tertiary2-50,
+    "color-chart-color2-2": $color-tertiary2-20,
+    "color-chart-color3-0": $color-tertiary6,
+    "color-chart-color3-1": $color-tertiary6-50,
+    "color-chart-color3-2": $color-tertiary6-20,
+);
+
+$breakpoints: (
+  "zero": 0,
+  "xxs": 320px,
+  "xs": 375px,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1440px,
+  "xxxl": 1600px
+);
+
+$container-widths: (
+  "sm": 540px,
+  "md": 720px,
+  "lg": 960px,
+  "xl": 1140px,
+  "xxl": 1380px,
+  "xxxl": 1540px
+);
+
+$spacings: (
+  "xs": 0.375rem,
+  "sm": 0.5rem,
+  "md": 0.75rem,
+  "lg": 1rem,
+  "xl": 1.5rem,
+  "xxl": 2rem,
+  "xxxl": 3rem,
+);
+
+$font-sizes: (
+  "base": 0.875rem,
+  "xs": 0.55rem,
+  "sm": 0.75rem,
+  "lg": 1rem,
+  "xl": 1.25rem,
+  "xxl": 1.75rem,
+  "xxxl": 2.2rem,
+);
+
+$border-radius: (
+  "xs": 0.2rem,
+  "sm": 0.2rem,
+  "md": 0.375rem,
+  "lg": 0.5rem,
+  "xl": 0.75rem,
+  "xxl": 1rem,
+  "xxxl": 1.5rem,
+);

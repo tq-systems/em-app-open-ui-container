@@ -1,0 +1,61 @@
+/*
+ * Copyright (c) 2026 TQ-Systems GmbH <license@tq-group.com>, D-82229 Seefeld,
+ * Germany. All rights reserved.
+ * Author: Ronny Freyer and the Energy Manager development team
+ *
+ * This software is licensed under the TQ-Systems Product Software License
+ * Agreement Version 1.0.3 or any later version.
+ * You can obtain a copy of the License Agreement in the TQS (TQ-Systems
+ * Software Licenses) folder on the following website:
+ * https://www.tq-group.com/en/support/downloads/tq-software-license-conditions/
+ * In case of any license issues please contact license@tq-group.com.
+ */
+
+@use "./custom-theme" as custom;
+
+// Import Bootstrap and override its default variables with custom settings
+@use "bootstrap/scss/bootstrap" with (
+  $theme-colors: custom.$custom-theme-colors,
+  $grid-breakpoints: custom.$custom-grid-breakpoints,
+  $container-max-widths: custom.$custom-container-max-widths,
+  $body-bg: custom.$body-bg,
+  $body-color: custom.$body-color,
+  $font-size-base: custom.$font-size-base,
+  $font-sizes: custom.$font-sizes,
+  $font-family-base: custom.$font-family-base,
+
+  // Tokens
+  $border-radius: custom.$border-radius,
+
+  $border-radius-sm: custom.$border-radius-sm,
+  $border-radius-lg: custom.$border-radius-lg,
+  $border-radius-xl: custom.$border-radius-xl,
+  $border-radius-xxl: custom.$border-radius-xxl,
+  
+  // Navbar styles
+  $navbar-brand-padding-y: custom.$navbar-brand-padding-y,
+  
+  // Card styles
+  $card-bg: custom.$card-bg,
+  $card-border-color: custom.$card-border-color,
+  $card-border-width: custom.$card-border-width,
+  $card-cap-bg: custom.$card-cap-bg,
+
+  // Link styles
+  $link-color: custom.$link-color,
+  $link-decoration: custom.$link-decoration,
+  $link-hover-decoration: custom.$link-decoration,
+
+  // Dropdown colors
+  $dropdown-link-active-bg: custom.$dropdown-link-active-bg,
+  $dropdown-link-hover-bg: custom.$dropdown-link-hover-bg,
+
+  // Pagination
+  $pagination-active-bg: custom.$custom-active-bg,
+  $pagination-active-color: custom.$custom-active-color,
+  $pagination-active-border-color: custom.$custom-active-bg,
+
+  // Nav Pills
+  $nav-pills-link-active-bg: custom.$custom-active-bg,
+  $nav-pills-link-active-color: custom.$custom-active-color,
+);
