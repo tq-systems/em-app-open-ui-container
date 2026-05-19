@@ -247,7 +247,7 @@ export default {
         handleFieldValidation(field: string, value: unknown) {
             if (field === 'newPassword') {
                 // Get all issues for newPassword
-                const issues = validateAll(passwordChangeSchema, { newPassword: value })
+                const issues = this.validateAll(passwordChangeSchema, { newPassword: value })
                     .filter(err => err.field === 'newPassword')
                     .map(err => err.message)
                 if (issues.length > 0) {
