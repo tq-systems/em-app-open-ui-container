@@ -8,6 +8,12 @@
 # In case of any license issues please contact license@tq-group.com.
 #
 
+# The application ID must be unique across all Energy Manager applications. Ensure it does not
+# conflict with other apps in the bundle. It is typically derived from the project URL. It must be
+# hardcoded here because the official URL does not follow the common pattern for the app id.
+# The app id in the bundle definition has to match the app id in the application.
+APP_ID = open-ui-container
+
 # set empty backend build tool
 BACKEND_BUILD =
 
