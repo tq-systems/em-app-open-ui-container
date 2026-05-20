@@ -1,3 +1,7 @@
+## [1.0.2] - 2026-05-20
+### Changed
+- Makefile: Set app id
+
 ## [1.0.1] - 2026-05-19
 ### Fixed
 - password validation
