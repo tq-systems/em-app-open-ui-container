@@ -1,1 +1,3 @@
 ## [{{ version }}]
+### Changed
+- Makefile: Set app id
